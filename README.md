@@ -27,5 +27,6 @@ To learn more about the technologies used in this project, take a look at the fo
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs) - learn about Tailwind CSS utility-first framework.
 
+## Disclaimer
 
 As requested for this challenge the entirety of this project, including deploy, was done within 4 hours so there's always room for improvement.
