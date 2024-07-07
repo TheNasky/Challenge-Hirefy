@@ -1,0 +1,587 @@
+{
+   "releases": [
+      {
+         "version": "6.5",
+         "title": "New features and enhanced algorithms",
+         "date": "2024-08-10",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Redesigned notifications",
+               "description": "Customizing your notification settings is now easier than ever. Quickly change your settings using presets like Focused or Mentions only, or tailor them to fit your needs.",
+               "content": {
+                  "type": "image",
+                  "link": "https://s3-alpha-sig.figma.com/img/9c8e/f835/7b4e0f2fd3b0e7474266fc3c4441aaff?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Knz1JW5WHt6NUX0RItV1HziHgRyaTY~8R03brNrX1GKBrLhqoaWvC-NBXi4t8LguIM49XurtlMlgWlOeMZI3N81vacDwCorrlIrHlXqdifT4TpRFLzxVgTNPI~iT9jkdHmvjE-PDzTYnwciOr8d-Lohsdvot~aGyOXuomxnEXQ8vgon3RNEpOiWw6VtGqIZePVvKIapb25XQYfqh~7-EL8kWWp8LbtCur9KCMaOORwGSSO0fK9veJnsbsZ15ALkrfhBqYy63JxHHBvSaUQq6P9I7eoSSg~lpY4i7e8WbNxwVdyAbUx0V6bbkbv9F8HcPemvwndir6neXF-vUsg5v2g__"
+               },
+               "subtext": ""
+            },
+            {
+               "type": "Fix",
+               "title": "Bug Fixes",
+               "description": "In our continuous effort to make Hirefy the most reliable recruiting platform, we eliminate bugs in the platform! 🚫 Here's a summary of some of the major fixes:",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Unable to attach PDF to tasks using the Adobe integration.",
+                     "The total contract time between talent and clients cannot be updated.",
+                     "Some files are not loading when uploaded to portfolio.",
+                     "You cannot update the company photo.",
+                     "You cannot update the job post list from the talent dashboard.",
+                     "The marketplace filters were not working correctly, they duplicated cards.",
+                     "Users could enter a talent's portfolio without having to log in.",
+                     "Homepage: new images with correct shadows.",
+                     "Email Hirefy signatures displayed incorrect padding."
+                  ]
+               }
+            },
+            {
+               "type": "Feat",
+               "title": "Redesigned notifications",
+               "description": "Customizing your notification settings is now easier than ever. Quickly change your settings using presets like Focused or Mentions only, or tailor them to fit your needs.",
+               "content": {
+                  "type": "image",
+                  "link": "https://s3-alpha-sig.figma.com/img/9622/078d/c99f8f70d8de097d1b6031dd2a3e3e73?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J-C9gKj-BXhg2OHM5gU9nyOOIjLeEhieBECi6PP~fl3pTIsMV97EEd16yRSchkf9vjfB6VEPer0pGqKTzafrdbpUuFbxTODfh5Keid~dJdG1lOhW7qPkKu~U6q55pD3yQFbWsPUZEIPPVmx7rvaIFewbRDBtbnnfxWqZ4hjdxLX8ZxZm0vd0utk6QFK6NDETH07UdKWnPZQu4c1x7FTptnEK7A4VYoTjWFiwTI4AgMRXNgeW38UFS9gFocmZ8Alfuebq9ksWnsIy6DNjUZk4bj3EolUpWpiDcpTYxYceSdE~WjkuvGeYlXrA3MxFo3MxlJVSQONUmLDSKQQ9jSWboA__"
+               },
+               "subtext": ""
+            }
+         ]
+      },
+      {
+         "version": "6.4",
+         "title": "Hirefy: Precision Unleashed",
+         "date": "2023-09-15",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "New Reporting Tools",
+               "description": "Added new tools for generating reports.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Fix",
+               "title": "Performance Improvements",
+               "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Optimized database queries for faster report generation.",
+                     "Reduced memory usage in the backend services.",
+                     "Improved caching mechanisms."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "6.3",
+         "title": "Hirefy is Expanding Horizons",
+         "date": "2023-08-20",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Augmented Reality Talent Portfolios",
+               "description": "Introducing augmented reality talent portfolios.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Feat",
+               "title": "Interactive Interview Feedback",
+               "description": "Added new tools for interactive interview feedback.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Fix",
+               "title": "Bug Fixes",
+               "description": "Resolved several minor bugs.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Fixed issues with login and data synchronization.",
+                     "Corrected typos in the user interface.",
+                     "Resolved intermittent crashes in the mobile app."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "6.2",
+         "title": "Time for some Bug Squashing",
+         "date": "2023-07-10",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Critical Bug Fixes",
+               "description": "Addressed critical bugs affecting user experience.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Fixed critical issues with data processing and UI rendering.",
+                     "Resolved security vulnerabilities in the authentication module.",
+                     "Improved error messages for better user guidance."
+                  ]
+               }
+            },
+            {
+               "type": "Feat",
+               "title": "Improved Analytics",
+               "description": "Enhanced analytics dashboard with new metrics.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "6.1",
+         "title": "Augmented Reality Talent Portfolios are Live",
+         "date": "2023-06-25",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "AR Talent Portfolios",
+               "description": "Launched augmented reality talent portfolios.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Fix",
+               "title": "Minor Bug Fixes",
+               "description": "Resolved minor bugs reported by users.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Fixed minor issues with notifications and user settings.",
+                     "Corrected display issues on smaller screens.",
+                     "Improved loading times for the dashboard."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "6.0",
+         "title": "Augmented Reality Talent Portfolios are in BETA",
+         "date": "2023-05-15",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "AR Talent Portfolios BETA",
+               "description": "Beta release of augmented reality talent portfolios.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Feat",
+               "title": "New User Interface",
+               "description": "Revamped user interface for better usability.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Fix",
+               "title": "Performance Enhancements",
+               "description": "Improved application performance and load times.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Optimized codebase for faster load times.",
+                     "Reduced server response times.",
+                     "Enhanced database indexing."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "5.4",
+         "title": "Bug Fixes and Performance Optimization",
+         "date": "2023-05-15",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Bug Fixes",
+               "description": "Resolved several minor bugs.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Fixed issues with login and data synchronization.",
+                     "Resolved UI glitches in the dashboard.",
+                     "Improved error handling in the API."
+                  ]
+               }
+            },
+            {
+               "type": "Fix",
+               "title": "Performance Improvements",
+               "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Optimized database queries for faster report generation.",
+                     "Reduced memory usage in the backend services.",
+                     "Improved caching mechanisms."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "5.3",
+         "title": "Simplified Job Posting Analytics",
+         "date": "2023-04-20",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Simplified Job Posting Analytics",
+               "description": "Simplified job posting analytics for easier insights.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "5.2",
+         "title": "Interactive Interview Feedback",
+         "date": "2023-03-25",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Interactive Interview Feedback",
+               "description": "Added new tools for interactive interview feedback.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "5.1",
+         "title": "Responsive Design Tweaks: Your tablet is ready for Hirefy!",
+         "date": "2023-03-01",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Responsive Design",
+               "description": "Improved responsive design for better tablet support.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "5.0",
+         "title": "Expanded Language Support",
+         "date": "2023-02-15",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Expanded Language Support",
+               "description": "Added support for multiple languages.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "4.3",
+         "title": "Server Performance Optimization",
+         "date": "2023-01-20",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Performance Improvements",
+               "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Optimized database queries for faster report generation.",
+                     "Reduced memory usage in the backend services.",
+                     "Improved caching mechanisms."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "4.2",
+         "title": "Intelligent Candidate Recommendations and Collaborative Talent Projects",
+         "date": "2023-01-01",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Intelligent Candidate Recommendations",
+               "description": "Added intelligent candidate recommendations.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            },
+            {
+               "type": "Feat",
+               "title": "Collaborative Talent Projects",
+               "description": "Introduced collaborative talent projects.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "4.1",
+         "title": "Our Mobile app is on the store",
+         "date": "2022-12-15",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Mobile App",
+               "description": "Our mobile app is now available.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "4.0",
+         "title": "Advanced Networking Communities",
+         "date": "2022-11-20",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Advanced Networking Communities",
+               "description": "Introduced advanced networking communities.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "3.3",
+         "title": "Personalized Skill Development Recommendations",
+         "date": "2022-10-25",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Personalized Skill Development Recommendations",
+               "description": "Added personalized skill development recommendations.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "3.2",
+         "title": "Community-Reported Bug Fixes",
+         "date": "2022-10-01",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Bug Fixes",
+               "description": "Resolved several minor bugs.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Fixed issues with login and data synchronization.",
+                     "Resolved UI glitches in the dashboard.",
+                     "Improved error handling in the API."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "3.1",
+         "title": "Getting ready for Mobile Launch",
+         "date": "2022-09-15",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Mobile App",
+               "description": "Preparing for the launch of our mobile app.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "3.0",
+         "title": "Our family is getting bigger",
+         "date": "2022-08-20",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "New Features",
+               "description": "Added new features to the platform.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "2.2",
+         "title": "The importance of Consent",
+         "date": "2022-07-25",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Consent",
+               "description": "Added consent features.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "2.1",
+         "title": "AI-Powered Skill Gap Analysis",
+         "date": "2022-07-01",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "AI-Powered Skill Gap Analysis",
+               "description": "Added AI-powered skill gap analysis.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "2.0",
+         "title": "Cloud Infrastructure Scaling",
+         "date": "2022-06-15",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Performance Improvements",
+               "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
+               "content": {
+                  "type": "text",
+                  "text": [
+                     "Optimized database queries for faster report generation.",
+                     "Reduced memory usage in the backend services.",
+                     "Improved caching mechanisms."
+                  ]
+               }
+            }
+         ]
+      },
+      {
+         "version": "1.4",
+         "title": "Baby steps..",
+         "date": "2022-05-20",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "New Features",
+               "description": "Added new features to the platform.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      },
+      {
+         "version": "1.3",
+         "title": "Proactive Community Bug Hunt",
+         "date": "2022-04-25",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Bug Fixes",
+               "description": "Resolved several minor bugs.",
+               "content": {
+                  "type": "text",
+                  "text": "Fixed issues with login and data synchronization."
+               }
+            }
+         ]
+      },
+      {
+         "version": "1.2",
+         "title": "User-Centric Performance Enhancements",
+         "date": "2022-04-01",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Performance Improvements",
+               "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
+               "content": {
+                  "type": "text",
+                  "text": "Experience a smoother and more responsive application."
+               }
+            }
+         ]
+      },
+      {
+         "version": "1.1",
+         "title": "Server Response Time Tweaks",
+         "date": "2022-03-15",
+         "changes": [
+            {
+               "type": "Fix",
+               "title": "Performance Improvements",
+               "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
+               "content": {
+                  "type": "text",
+                  "text": "Experience a smoother and more responsive application."
+               }
+            }
+         ]
+      },
+      {
+         "version": "1.0",
+         "title": "Initial Launch: Navigating the Beginning",
+         "date": "2022-02-20",
+         "changes": [
+            {
+               "type": "Feat",
+               "title": "Initial Launch",
+               "description": "Initial launch of the application.",
+               "content": {
+                  "type": "image",
+                  "link": "https://i.imgur.com/OSjBw2b.jpeg"
+               }
+            }
+         ]
+      }
+   ]
+}

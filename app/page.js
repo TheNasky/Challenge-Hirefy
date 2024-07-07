@@ -1,113 +1,113 @@
+"use client";
 import Image from "next/image";
+import releases from "./releases.json";
+import FilterSelect from "./components/FilterSelect";
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+   const [changeType, setChangeType] = useState("all");
+   const [selectedReleaseIndex, setSelectedReleaseIndex] = useState(0);
+   const chosenRelease = releases.releases[selectedReleaseIndex];
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+   const filteredChanges = chosenRelease.changes.filter((change) => {
+      if (changeType === "all") return true;
+      return change.type.toLowerCase() === changeType.toLowerCase();
+   });
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+   const sortedChanges = filteredChanges.sort((a, b) => {
+      if (changeType === "all") return 0;
+      if (changeType === "feat") {
+         return a.type === "Feat" ? -1 : 1;
+      } else {
+         return a.type === "Fix" ? -1 : 1;
+      }
+   });
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+   const adjustDate = (dateString) => {
+      const date = new Date(dateString);
+      date.setDate(date.getDate() + 1);
+      return date;
+   };
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+   return (
+      <main className="">
+         <nav className="text-white font-bold py-9 lg:py-14 px-3 lg:px-12 lg:text-[46px] bg-[linear-gradient(90deg,#0D5287_-14.11%,#187DCA_13.97%,#05AACE_40.69%,#04D2C6_68.1%,#26E4C7_90.02%,#D3FFF5_117.42%)] text-[36px]">
+            <h1> Release Notes </h1>
+         </nav>
+         <div className="flex py-10 px-3 lg:px-18 xlg:px-36 justify-between flex-col lg:flex-row sm:px-6">
+            <section className="lg:w-8/12 xl:w-8/12 lg:px-12 xlg:px-24 sm:w-full sm:px-0">
+               <div className="text-[32px] flex flex-col lg:flex-row justify-between pb-2 mb-8 border-b-2 border-b-[#DEE7F0] lg:text-[44px]">
+                  <p className="">Release {chosenRelease.version}</p>
+                  <div className="pl-0.5 lg:pl-0"><FilterSelect setChangeType={setChangeType} /></div>
+               </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+               <div className="relative">
+                  <div className="absolute left-3.5 top-[18px] lg:top-4 bottom-0 w-1 bg-[#39D3BB]"></div>
+                  {sortedChanges.length === 0 ? (
+                     <p className="text-center text-[20px] lg:text-[30px] py-8 pl-4">
+                        No new {changeType === "feat" ? "Features" : "Fixes"} in the current patch
+                     </p>
+                  ) : (
+                     sortedChanges.map((change, index) => (
+                        <div key={index} className="relative pl-16 mb-8">
+                           <div className="absolute left-1 top-[18px] lg:top-4 w-[25px] h-[25px] bg-[#39D3BB] rounded-full"></div>
+                           <h3 className="pt-3 lg:pt-0 pb-1 lg:pb-0 text-[24px] lg:text-[36px]">{change.title}</h3>
+                           <div className="flex items-center">
+                              <div
+                                 className={`text-[14px] font-bold px-4 py-1 rounded-full ${
+                                    change.type === "Feat" ? "bg-[#D3FFF5] text-[#1CB59C]" : "bg-[#FFF8E5] text-[#FFB800]"
+                                 } sm:text-[14px]`}
+                              >
+                                 {change.type}
+                              </div>
+                              <p className="text-[#7D879C] text-[14px] font-semibold px-2 sm:text-[14px]">
+                                 {adjustDate(chosenRelease.date).toLocaleDateString("en-US", {
+                                    day: "numeric",
+                                    month: "short",
+                                    year: "numeric",
+                                 })}
+                              </p>
+                           </div>
+
+                           <p className="text-[#7D879C] text-[14px] font-semibold my-4 lg:my-6 sm:text-[14px]">{change.description}</p>
+                           {change.content.type === "image" ? (
+                              <Image
+                                 src={change.content.link}
+                                 alt={change.title}
+                                 width={500}
+                                 height={300}
+                                 className="w-full rounded-2xl"
+                              />
+                           ) : (
+                              <ul className="list-disc pl-5">
+                                 {change.content.text.map((text, idx) => (
+                                    <li className="py-1" key={idx}>{text}</li>
+                                 ))}
+                              </ul>
+                           )}
+                           {change.subtext && <p>{change.subtext}</p>}
+                        </div>
+                     ))
+                  )}
+               </div>
+            </section>
+            <section className="lg:w-4/12 xlg:w-4/12 p-4 lg:px-12 xlg:px-24 sm:w-full sm:px-0">
+               <h2 className="text-[25px] mb-4 font-bold sm:text-[25px]">All release notes</h2>
+               <ul>
+                  {releases.releases.map((release, index) => (
+                     <li key={index} className="mb-2">
+                        <a
+                           href="#"
+                           className={` line-clamp-1 my-3 font-bold ${index === selectedReleaseIndex ? "text-[#2B3445] border-b-[1px] border-b-[#2B3445]" : "text-[#7D879C] "}`}
+                           onClick={() => setSelectedReleaseIndex(index)}
+                        >
+                           Release {release.version}: {release.title}
+                        </a>
+                     </li>
+                  ))}
+               </ul>
+            </section>
+         </div>
+      </main>
+   );
 }
