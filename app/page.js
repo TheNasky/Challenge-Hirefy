@@ -31,7 +31,10 @@ export default function Home() {
 
    return (
       <main className="">
-         <nav className="text-white font-bold py-9 lg:py-14 px-3 lg:px-12 lg:text-[46px] bg-[linear-gradient(90deg,#0D5287_-14.11%,#187DCA_13.97%,#05AACE_40.69%,#04D2C6_68.1%,#26E4C7_90.02%,#D3FFF5_117.42%)] text-[36px]">
+         <nav 
+            className="text-white font-bold py-9 lg:py-14 px-3 lg:px-12 lg:text-[46px] bg-[linear-gradient(90deg,#0D5287_-14.11%,#187DCA_13.97%,#05AACE_40.69%,#04D2C6_68.1%,#26E4C7_90.02%,#D3FFF5_117.42%)] text-[36px] cursor-pointer"
+            onClick={() => window.location.reload()}
+         >
             <h1> Release Notes </h1>
          </nav>
          <div className="flex py-10 px-3 lg:px-18 xlg:px-36 justify-between flex-col lg:flex-row sm:px-6">
