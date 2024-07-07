@@ -29,6 +29,6 @@ To learn more about the technologies used in this project, take a look at the fo
 
 ## Disclaimer
 
-- **As requested for this challenge the entirety of this project, including deploy, was done within 4 hours so there's always room for improvement.
+- As requested for this challenge the entirety of this project, including deploy, was done within 4 hours so there's always room for improvement.
 
-- **All the code in this project is of my own making.
+- All the code in this project is of my own making.
