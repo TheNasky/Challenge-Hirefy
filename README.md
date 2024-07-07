@@ -26,3 +26,6 @@ To learn more about the technologies used in this project, take a look at the fo
 - [React Documentation](https://reactjs.org/docs/getting-started.html) - learn about React features and API.
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs) - learn about Tailwind CSS utility-first framework.
+
+
+As requested for this challenge the entirety of this project, including deploy, was done within 4 hours so there's always room for improvement.
