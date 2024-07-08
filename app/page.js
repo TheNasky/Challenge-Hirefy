@@ -83,7 +83,7 @@ export default function Home() {
                               />
                            ) : (
                               <ul className="list-disc pl-5">
-                                 {change.content.text.map((text, idx) => (
+                                 {change?.content?.text?.map((text, idx) => (
                                     <li className="py-1" key={idx}>{text}</li>
                                  ))}
                               </ul>

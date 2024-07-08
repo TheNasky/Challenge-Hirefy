@@ -530,7 +530,10 @@
                "description": "Resolved several minor bugs.",
                "content": {
                   "type": "text",
-                  "text": "Fixed issues with login and data synchronization."
+                  "text": [
+                     "Fixed issues with login and data synchronization."
+                     
+                  ]
                }
             }
          ]
@@ -546,7 +549,7 @@
                "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
                "content": {
                   "type": "text",
-                  "text": "Experience a smoother and more responsive application."
+                  "text": ["Experience a smoother and more responsive application."]
                }
             }
          ]
@@ -562,7 +565,7 @@
                "description": "Our latest update includes several performance enhancements that make the application run faster and more efficiently.",
                "content": {
                   "type": "text",
-                  "text": "Experience a smoother and more responsive application."
+                  "text": ["Experience a smoother and more responsive application."]
                }
             }
          ]
