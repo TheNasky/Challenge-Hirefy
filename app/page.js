@@ -3,6 +3,8 @@ import Image from "next/image";
 import releases from "./releases.json";
 import FilterSelect from "./components/FilterSelect";
 import { useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Home() {
    const [changeType, setChangeType] = useState("all");
@@ -51,50 +53,66 @@ export default function Home() {
                         No new {changeType === "feat" ? "Features" : "Fixes"} in the current patch
                      </p>
                   ) : (
-                     sortedChanges.map((change, index) => (
-                        <div key={index} className="relative pl-16 mb-8">
-                           <div className="absolute left-1 top-[18px] lg:top-4 w-[25px] h-[25px] bg-[#39D3BB] rounded-full"></div>
-                           <h3 className="pt-3 lg:pt-0 pb-1 lg:pb-0 text-[24px] lg:text-[36px]">{change.title}</h3>
-                           <div className="flex items-center">
-                              <div
-                                 className={`text-[14px] font-bold px-4 py-1 rounded-full ${
-                                    change.type === "Feat" ? "bg-[#D3FFF5] text-[#1CB59C]" : "bg-[#FFF8E5] text-[#FFB800]"
-                                 } sm:text-[14px]`}
-                              >
-                                 {change.type}
-                              </div>
-                              <p className="text-[#7D879C] text-[14px] font-semibold px-2 sm:text-[14px]">
-                                 {adjustDate(chosenRelease.date).toLocaleDateString("en-US", {
-                                    day: "numeric",
-                                    month: "short",
-                                    year: "numeric",
-                                 })}
-                              </p>
-                           </div>
+                     sortedChanges.map((change, index) => {
+                        const controls = useAnimation();
+                        const [ref, inView] = useInView({ triggerOnce: true });
 
-                           <p className="text-[#7D879C] text-[14px] font-semibold my-4 lg:my-6 sm:text-[14px]">{change.description}</p>
-                           {change.content.type === "image" ? (
-                              <Image
-                                 src={change.content.link}
-                                 alt={change.title}
-                                 width={500}
-                                 height={300}
-                                 className="w-full rounded-2xl"
-                              />
-                           ) : (
-                              <ul className="list-disc pl-5">
-                                 {change?.content?.text?.map((text, idx) => (
-                                    <li className="py-1" key={idx}>{text}</li>
-                                 ))}
-                              </ul>
-                           )}
-                           {change.subtext && <p>{change.subtext}</p>}
-                        </div>
-                     ))
+                        if (inView) {
+                           controls.start({ opacity: 1, y: 0 });
+                        }
+
+                        return (
+                           <motion.div
+                              key={index}
+                              ref={ref}
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={controls}
+                              transition={{ duration: 0.5, delay: index * 0.1 }}
+                              className="relative pl-16 mb-8"
+                           >
+                              <div className="absolute left-1 top-[18px] lg:top-4 w-[25px] h-[25px] bg-[#39D3BB] rounded-full"></div>
+                              <h3 className="pt-3 lg:pt-0 pb-1 lg:pb-0 text-[24px] lg:text-[36px]">{change.title}</h3>
+                              <div className="flex items-center">
+                                 <div
+                                    className={`text-[14px] font-bold px-4 py-1 rounded-full ${
+                                       change.type === "Feat" ? "bg-[#D3FFF5] text-[#1CB59C]" : "bg-[#FFF8E5] text-[#FFB800]"
+                                    } sm:text-[14px]`}
+                                 >
+                                    {change.type}
+                                 </div>
+                                 <p className="text-[#7D879C] text-[14px] font-semibold px-2 sm:text-[14px]">
+                                    {adjustDate(chosenRelease.date).toLocaleDateString("en-US", {
+                                       day: "numeric",
+                                       month: "short",
+                                       year: "numeric",
+                                    })}
+                                 </p>
+                              </div>
+
+                              <p className="text-[#7D879C] text-[14px] font-semibold my-4 lg:my-6 sm:text-[14px]">{change.description}</p>
+                              {change.content.type === "image" ? (
+                                 <Image
+                                    src={change.content.link}
+                                    alt={change.title}
+                                    width={500}
+                                    height={300}
+                                    className="w-full rounded-2xl"
+                                 />
+                              ) : (
+                                 <ul className="list-disc pl-5">
+                                    {change?.content?.text?.map((text, idx) => (
+                                       <li className="py-1" key={idx}>{text}</li>
+                                    ))}
+                                 </ul>
+                              )}
+                              {change.subtext && <p>{change.subtext}</p>}
+                           </motion.div>
+                        );
+                     })
                   )}
                </div>
             </section>
-            <section className="lg:w-4/12 xlg:w-4/12 p-4 lg:px-12 xlg:px-24 sm:w-full sm:px-0">
+            <section className="lg:w-4/12 xlg:w-4/12 p-4 lg:px-12 xlg:px-24 sm:w-full sm:px-0 lg:sticky lg:top-0">
                <h2 className="text-[25px] mb-4 font-bold sm:text-[25px]">All release notes</h2>
                <ul>
                   {releases.releases.map((release, index) => (
